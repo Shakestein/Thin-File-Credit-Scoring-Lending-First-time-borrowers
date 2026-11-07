@@ -1,0 +1,440 @@
+{
+  "assumptions": {
+    "avg_loan_inr": 25000,
+    "tenor_months": 6,
+    "margin_rate": 0.16,
+    "cost_of_funds_annual": 0.1,
+    "lgd": 0.85,
+    "breakeven_pd": 0.1089108910891089
+  },
+  "data": {
+    "applicants": 307511,
+    "base_default_rate": 0.08072881945686496,
+    "thin_share": 0.14314935075493235,
+    "thin_default_rate": 0.10124943207632894,
+    "hist_default_rate": 0.07730055296006315,
+    "n_features_full": 161,
+    "n_features_alt": 121
+  },
+  "validation_metrics_all": [
+    {
+      "model": "Logistic regression",
+      "feature_set": "Full",
+      "n": 61502,
+      "default_rate": 0.08072908198107379,
+      "roc_auc": 0.7554382454780435,
+      "pr_auc": 0.2392691649332692,
+      "ks": 0.37878555623663535,
+      "gini": 0.510876490956087
+    },
+    {
+      "model": "Logistic regression",
+      "feature_set": "Alternative-data",
+      "n": 61502,
+      "default_rate": 0.08072908198107379,
+      "roc_auc": 0.682075699039143,
+      "pr_auc": 0.162763724000006,
+      "ks": 0.2699421482328829,
+      "gini": 0.364151398078286
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Full",
+      "n": 61502,
+      "default_rate": 0.08072908198107379,
+      "roc_auc": 0.7695260352367345,
+      "pr_auc": 0.2605420139632442,
+      "ks": 0.4028679950270426,
+      "gini": 0.5390520704734689
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Alternative-data",
+      "n": 61502,
+      "default_rate": 0.08072908198107379,
+      "roc_auc": 0.7067947785479127,
+      "pr_auc": 0.18526081445703374,
+      "ks": 0.3087794229557555,
+      "gini": 0.41358955709582546
+    }
+  ],
+  "validation_metrics_thin": [
+    {
+      "model": "Logistic regression",
+      "feature_set": "Full",
+      "n": 8803,
+      "default_rate": 0.10121549471770987,
+      "roc_auc": 0.7349777121853294,
+      "pr_auc": 0.2554657182460333,
+      "ks": 0.3521571177452539,
+      "gini": 0.46995542437065874
+    },
+    {
+      "model": "Logistic regression",
+      "feature_set": "Alternative-data",
+      "n": 8803,
+      "default_rate": 0.10121549471770987,
+      "roc_auc": 0.6882978475917472,
+      "pr_auc": 0.20030661112338377,
+      "ks": 0.28167715237988245,
+      "gini": 0.37659569518349434
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Full",
+      "n": 8803,
+      "default_rate": 0.10121549471770987,
+      "roc_auc": 0.7632830382240561,
+      "pr_auc": 0.2777700754228311,
+      "ks": 0.3790476101311962,
+      "gini": 0.5265660764481122
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Alternative-data",
+      "n": 8803,
+      "default_rate": 0.10121549471770987,
+      "roc_auc": 0.7135117890510542,
+      "pr_auc": 0.23144869817133362,
+      "ks": 0.30861346302027126,
+      "gini": 0.42702357810210834
+    }
+  ],
+  "test_metrics_all": [
+    {
+      "model": "Logistic regression",
+      "feature_set": "Full",
+      "n": 61503,
+      "default_rate": 0.08072776937710356,
+      "roc_auc": 0.7552108097444075,
+      "pr_auc": 0.24153772144583693,
+      "ks": 0.3795019022577548,
+      "gini": 0.5104216194888149
+    },
+    {
+      "model": "Logistic regression",
+      "feature_set": "Alternative-data",
+      "n": 61503,
+      "default_rate": 0.08072776937710356,
+      "roc_auc": 0.6822938467322124,
+      "pr_auc": 0.16600123861390925,
+      "ks": 0.26702510270610186,
+      "gini": 0.36458769346442477
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Full",
+      "n": 61503,
+      "default_rate": 0.08072776937710356,
+      "roc_auc": 0.7685280710418471,
+      "pr_auc": 0.26067485680181973,
+      "ks": 0.39884150317210393,
+      "gini": 0.5370561420836941
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Alternative-data",
+      "n": 61503,
+      "default_rate": 0.08072776937710356,
+      "roc_auc": 0.7078921191486609,
+      "pr_auc": 0.1889728560800879,
+      "ks": 0.30393511237903353,
+      "gini": 0.4157842382973218
+    }
+  ],
+  "test_metrics_thin": [
+    {
+      "model": "Logistic regression",
+      "feature_set": "Full",
+      "n": 8804,
+      "default_rate": 0.10120399818264425,
+      "roc_auc": 0.7233779586448191,
+      "pr_auc": 0.2391011021204049,
+      "ks": 0.33714257590579255,
+      "gini": 0.44675591728963826
+    },
+    {
+      "model": "Logistic regression",
+      "feature_set": "Alternative-data",
+      "n": 8804,
+      "default_rate": 0.10120399818264425,
+      "roc_auc": 0.6813623974414235,
+      "pr_auc": 0.20283373103606342,
+      "ks": 0.2821542864510133,
+      "gini": 0.3627247948828469
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Full",
+      "n": 8804,
+      "default_rate": 0.10120399818264425,
+      "roc_auc": 0.7495835391702951,
+      "pr_auc": 0.2729479724105154,
+      "ks": 0.3812354416002421,
+      "gini": 0.49916707834059015
+    },
+    {
+      "model": "LightGBM",
+      "feature_set": "Alternative-data",
+      "n": 8804,
+      "default_rate": 0.10120399818264425,
+      "roc_auc": 0.7044452131861036,
+      "pr_auc": 0.23056330714525158,
+      "ks": 0.30649006599973366,
+      "gini": 0.4088904263722073
+    }
+  ],
+  "calibration_validation": [
+    {
+      "feature_set": "Full",
+      "brier_raw": 0.06700638582057607,
+      "brier_calibrated": 0.06703602693979349,
+      "ece_raw": 0.003450876372260248,
+      "ece_calibrated": 0.0017182726477278551,
+      "auc_raw": 0.7695260352367345,
+      "auc_calibrated": 0.767713089919049,
+      "use_calibrated": false
+    },
+    {
+      "feature_set": "Alternative-data",
+      "brier_raw": 0.07060219775709699,
+      "brier_calibrated": 0.07062706290698831,
+      "ece_raw": 0.004266684871187283,
+      "ece_calibrated": 0.0012533195902919012,
+      "auc_raw": 0.7067947785479127,
+      "auc_calibrated": 0.7052550922413703,
+      "use_calibrated": false
+    }
+  ],
+  "calibration_test": [
+    {
+      "feature_set": "Full",
+      "brier": 0.06711222808329508,
+      "ece": 0.003516635443129782,
+      "mean_predicted_pd": 0.08037569096640702,
+      "observed_default_rate": 0.08072776937710356
+    },
+    {
+      "feature_set": "Alternative-data",
+      "brier": 0.07040686495711124,
+      "ece": 0.0023401276539809575,
+      "mean_predicted_pd": 0.08023670045198096,
+      "observed_default_rate": 0.08072776937710356
+    }
+  ],
+  "policy": {
+    "chosen_policy": "Alternative-data LightGBM, conservative threshold",
+    "chosen_threshold": 0.075,
+    "profit_max_threshold": 0.11,
+    "profit_max_approval_rate": 0.7928522649669929,
+    "profit_max_expected_profit": 1098889.536971473,
+    "conservative_approval_rate": 0.6200448765893792,
+    "conservative_expected_profit": 1017637.4328853606,
+    "conservative_exp_default_rate": 0.04391160779334628,
+    "full_profit_max_expected_profit": 1296916.8523906213
+  },
+  "thin_file_opportunity_validation": {
+    "naive_default_rate": 0.07730696977172243,
+    "naive_loss_rate": 0.06571092430596406,
+    "max_threshold_at_naive_loss": 0.16,
+    "thin_file_approved": 7532.0,
+    "share_of_thin_file_approved": 0.8556174031580143,
+    "default_rate_of_approved": 0.0766064790228359,
+    "loss_rate_of_approved": 0.06511550716941052,
+    "per_100k_applicants": 12246.756203050307,
+    "realised_profit_per_1000_thin": 697915.4833579459,
+    "full_model": {
+      "max_threshold_at_naive_loss": 0.23,
+      "thin_file_approved": 7974.0,
+      "share_of_thin_file_approved": 0.9058275587867772,
+      "default_rate_of_approved": 0.07700025081514923,
+      "loss_rate_of_approved": 0.06545021319287685,
+      "per_100k_applicants": 12965.432018470943,
+      "realised_profit_per_1000_thin": 729864.8188117684
+    }
+  },
+  "test_policy": {
+    "approval_rate": 0.6176609271092467,
+    "default_rate_approved": 0.04482994629883121,
+    "realised_profit_per_1000": 999402.4681722842,
+    "thin_approval_rate": 0.5300999545661064,
+    "thin_default_rate_approved": 0.052924791086350974,
+    "naive_default_rate": 0.07730696977172243
+  },
+  "sensitivity": {
+    "optimal_threshold_min": 0.045,
+    "optimal_threshold_max": 0.235,
+    "approval_rate_min": 0.329907970472505,
+    "approval_rate_max": 0.9653344606679457,
+    "unprofitable_scenarios": 0
+  },
+  "fairness": {
+    "CODE_GENDER": [
+      {
+        "CODE_GENDER": "F",
+        "applicants": 40622,
+        "approval_rate": 0.6601102850672049,
+        "default_rate_all": 0.06964206587563389,
+        "default_rate_approved": 0.0400149170240537,
+        "approval_ratio_vs_max": 1.0
+      },
+      {
+        "CODE_GENDER": "M",
+        "applicants": 20878,
+        "approval_rate": 0.5421017338825558,
+        "default_rate_all": 0.10230865025385573,
+        "default_rate_approved": 0.053012899805619365,
+        "approval_ratio_vs_max": 0.8212290372469582
+      }
+    ],
+    "AGE_BAND": [
+      {
+        "AGE_BAND": "<25",
+        "applicants": 2473,
+        "approval_rate": 0.2879094217549535,
+        "default_rate_all": 0.11767084512737566,
+        "default_rate_approved": 0.06320224719101124,
+        "approval_ratio_vs_max": 0.3479305316928174
+      },
+      {
+        "AGE_BAND": "25-34",
+        "applicants": 14482,
+        "approval_rate": 0.43633476039221103,
+        "default_rate_all": 0.10854854301892004,
+        "default_rate_approved": 0.05159044152555784,
+        "approval_ratio_vs_max": 0.5272984268939024
+      },
+      {
+        "AGE_BAND": "35-44",
+        "applicants": 16833,
+        "approval_rate": 0.6087447276183687,
+        "default_rate_all": 0.08406107051624785,
+        "default_rate_approved": 0.04547672489509125,
+        "approval_ratio_vs_max": 0.735651078920672
+      },
+      {
+        "AGE_BAND": "45-54",
+        "applicants": 13935,
+        "approval_rate": 0.6784355938284894,
+        "default_rate_all": 0.06968066020810908,
+        "default_rate_approved": 0.041675481277766026,
+        "approval_ratio_vs_max": 0.8198705531803855
+      },
+      {
+        "AGE_BAND": "55+",
+        "applicants": 13779,
+        "approval_rate": 0.827491109659627,
+        "default_rate_all": 0.051963132302779595,
+        "default_rate_approved": 0.03876512892475004,
+        "approval_ratio_vs_max": 1.0
+      }
+    ],
+    "REGION_RATING_CLIENT": [
+      {
+        "REGION_RATING_CLIENT": 1,
+        "applicants": 6388,
+        "approval_rate": 0.8309329993738259,
+        "default_rate_all": 0.045710707576706325,
+        "default_rate_approved": 0.033534287867370005,
+        "approval_ratio_vs_max": 1.0
+      },
+      {
+        "REGION_RATING_CLIENT": 2,
+        "applicants": 45530,
+        "approval_rate": 0.6282670766527564,
+        "default_rate_all": 0.07952998023281353,
+        "default_rate_approved": 0.04516692885859116,
+        "approval_ratio_vs_max": 0.7560983582625862
+      },
+      {
+        "REGION_RATING_CLIENT": 3,
+        "applicants": 9584,
+        "approval_rate": 0.44042153589315525,
+        "default_rate_all": 0.10976627712854758,
+        "default_rate_approved": 0.04809286898839138,
+        "approval_ratio_vs_max": 0.5300325492248447
+      }
+    ],
+    "SEGMENT": [
+      {
+        "SEGMENT": "Has bureau history",
+        "applicants": 52699,
+        "approval_rate": 0.6333137251181237,
+        "default_rate_all": 0.07730696977172243,
+        "default_rate_approved": 0.04278651685393258,
+        "approval_ratio_vs_max": 1.0
+      },
+      {
+        "SEGMENT": "Thin-file (no bureau history)",
+        "applicants": 8803,
+        "approval_rate": 0.54061115528797,
+        "default_rate_all": 0.10121549471770987,
+        "default_rate_approved": 0.0514814036562303,
+        "approval_ratio_vs_max": 0.8536229894388234
+      }
+    ]
+  },
+  "shap_top_features": [
+    {
+      "feature": "ANNUITY_TO_CREDIT",
+      "mean_abs_shap": 0.1910845136174161,
+      "signal_family": "Loan structure"
+    },
+    {
+      "feature": "CREDIT_TO_GOODS",
+      "mean_abs_shap": 0.15199397197320574,
+      "signal_family": "Loan structure"
+    },
+    {
+      "feature": "EMPLOYED_YEARS",
+      "mean_abs_shap": 0.1356318799394698,
+      "signal_family": "Employment"
+    },
+    {
+      "feature": "AGE_YEARS",
+      "mean_abs_shap": 0.11396782708627666,
+      "signal_family": "Demographics & education"
+    },
+    {
+      "feature": "ORGANIZATION_TYPE",
+      "mean_abs_shap": 0.10864312330435985,
+      "signal_family": "Employment"
+    },
+    {
+      "feature": "NAME_EDUCATION_TYPE",
+      "mean_abs_shap": 0.10736230023879342,
+      "signal_family": "Demographics & education"
+    },
+    {
+      "feature": "YEARS_SINCE_PHONE_CHANGE",
+      "mean_abs_shap": 0.10349166144614495,
+      "signal_family": "Documents, contact & identity stability"
+    },
+    {
+      "feature": "OCCUPATION_TYPE",
+      "mean_abs_shap": 0.09828351969855113,
+      "signal_family": "Employment"
+    },
+    {
+      "feature": "YEARS_SINCE_ID_CHANGE",
+      "mean_abs_shap": 0.09254683139122824,
+      "signal_family": "Documents, contact & identity stability"
+    },
+    {
+      "feature": "AMT_ANNUITY",
+      "mean_abs_shap": 0.08364843944413392,
+      "signal_family": "Loan structure"
+    }
+  ],
+  "shap_family_share": {
+    "Loan structure": 0.23761293905033498,
+    "Employment": 0.170489640273316,
+    "Assets & housing": 0.15687412788173838,
+    "Documents, contact & identity stability": 0.14824087589589968,
+    "Demographics & education": 0.1234650649654452,
+    "Region & address": 0.08117348160925786,
+    "Income & affordability": 0.030212544182877506,
+    "Social circle": 0.026621425880679433,
+    "Other application data": 0.025309900260451074
+  }
+}
